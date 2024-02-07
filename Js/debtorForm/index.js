@@ -2,13 +2,6 @@ const dragArea = document.querySelector(".drag-area");
 const dropText = dragArea.querySelector("h2");
 const btnDrop = dragArea.querySelector("button");
 const inputFile = dragArea.querySelector("#input-file");
-const direccion = document.querySelector("#direccion");
-const tipoPropiedad = document.querySelector("#tipo-propiedad");
-const tamaño = document.querySelector("#tamaño");
-const habitaciones = document.querySelector("#habitaciones");
-const numeroBaños = document.querySelector("#numero-baños");
-const valor = document.querySelector("#valor");
-const ubicacion = document.querySelector("#ubicacion");
 const form = document.querySelector("form");
 
 let files;
@@ -49,8 +42,10 @@ dragArea.addEventListener("drop", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("buron send");
-  postImg();
+  const {
+    target: { elements },
+  } = e;
+  postImg(elements);
 });
 
 function showFiles(files) {
@@ -77,7 +72,7 @@ function processFile(file) {
     const fileReader = new FileReader();
     const id = `file-${Math.random().toString(36).substring(7)}`;
     console.log(URLimage);
-    
+
     fileReader.addEventListener("load", (e) => {
       URLimage = fileReader.result;
       console.log(fileReader.result);
@@ -104,19 +99,30 @@ function processFile(file) {
   }
 }
 
-async function postImg() {
+async function postImg({
+  direccion,
+  tipo_propiedad,
+  ubicacion,
+  tamaño,
+  habitaciones,
+  baños,
+  valor,
+  description,
+  ciudad
+}) {
   const house = {
     image: URLimage,
     userId: localStorage.getItem("idUser"),
     direccion: direccion.value,
 
-    tipoPropiedad: tipoPropiedad.value,
+    tipoPropiedad: tipo_propiedad.value,
     tamaño: tamaño.value,
     habitaciones: habitaciones.value,
-    numeroBaños: numeroBaños.value,
-
+    numeroBaños: baños.value,
+    ciudad:ciudad.value,
     valor: valor.value,
-    ubicacion: ubicacion.value,
+    
+    description: description.value,
   };
   console.log(house);
   await fetch("http://localhost:3000/houses", {

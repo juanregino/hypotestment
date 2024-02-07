@@ -1,3 +1,5 @@
+// Selectors
+
 //selects
 const modalbody = document.querySelector(".modal-body");
 const cardContainer = document.querySelector(".card-container");
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
 // GET DATA FOR CARDS
 async function getcardsData() {
-  const URL = "http://localhost:3000/house";
+  const URL = "http://localhost:3000/houses";
   const response = await fetch(URL);
   const data = await response.json();
   console.log(data);

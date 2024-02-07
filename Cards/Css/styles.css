@@ -5,13 +5,15 @@
   ---secondary: #839dd1;
   ---black: #27272a;
 }
-
+/* <----------------------------------------------Global styles----------------------------------------------> */
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* <----------------------------------------------HEADER STYLES----------------------------------------------> */
 
 li,
 a,
@@ -64,6 +66,9 @@ button:hover {
   background-color: var(---secondary);
 }
 
+/* <----------------------------------------------END HEADER STYLES----------------------------------------------> */
+
+/* <----------------------------------------------BODY STYLES---------------------------------------------> */
 body {
   display: flex;
   align-items: center;
@@ -71,16 +76,26 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 1px;
-  background-image: url('../Imgs/Lg\ samuel.svg');
+  background-image: url(/Card/Imgs/Lg\ samuel.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* <----------------------------------------------CARDS STYLES----------------------------------------------> */
+
+.card-container {
+  display: flex;
+  width: 100vw;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .card {
   position: relative;
   display: flex;
   width: 320px;
-  height: 400px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,9 +106,14 @@ body {
   height: 240px;
   background: transparent;
   border-radius: 15px;
-  background: url(../Imgs/pexels-binyamin-mellish-106399.jpg);
   background-size: cover;
   position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
 .card .imgBx::before {
@@ -139,7 +159,7 @@ body {
   top: -80px;
   left: 0;
   height: 80px;
-  width: 50%;
+  width: 70%;
   background: var(---primary);
   border-top: 10px solid #fff;
   border-right: 10px solid #fff;
@@ -193,9 +213,22 @@ body {
 
 .card ul {
   list-style: none;
+  display: flex;
+
+  width: 100%;
+  gap: 5px;
+  padding: 10px;
+  flex-direction: column;
+  li {
+    :nth-child(1) {
+      margin: 5px;
+    }
+  }
 }
 
-/* Modal  */
+/* <----------------------------------------------CARDS STYLES END----------------------------------------------> */
+
+/* <----------------------------------------------MODAL STYLES----------------------------------------------> */
 
 .modal-container {
   position: fixed;
@@ -305,3 +338,5 @@ p {
   background: var(---secondary);
   transition: 0.4s;
 }
+
+/* <----------------------------------------------MODAL STYLES END----------------------------------------------> */

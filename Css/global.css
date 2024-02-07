@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "K2D";
+}
+
+body {
+  min-height: 100vh;
+
+  background-image: url("../img/Imagen\ recortada.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form {
+  padding: 100px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: #eee;
+  /* background-color: rgba(142, 140, 140, 0.95); */
+}
+.text-center {
+  text-align: center;
+}
+.btn {
+  padding: 10px;
+  transition: 0.5s;
+}
+.btn-primary {
+  background: #30e0b2;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.mb-3 {
+  margin-bottom: 20px;
+}
+.mt-3 {
+  margin-top: 50px;
+}
+.d-middle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 150px;
+  position: relative;
+}
+.d-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 150px;
+}
+
+/* .shadow{
+   box-shadow: 3px 0px 25px 25px gray;
+} */
+
+input {
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px none black;
+  border: 1px solid black;
+  background: transparent;
+  margin: 5px 0;
+  outline: none;
+}
+input::placeholder {
+  color: black;
+  font-size: medium;
+  font-weight: light;
+}
+
+label {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: overline;
+  color: black;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(0.9, 0.9);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (width <= 1250px) {
+  .d-middle {
+    padding: 30px;
+  }
+  .form {
+    padding-inline: 80px;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.container input {
+  display: none;
+}
+
+.container .checkmark {
+  border: 2px solid #30e0b2;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container .container:first-child .checkmark {
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+}
+
+.checkbox-container .container:last-child .checkmark {
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #74E291;
+  
+}

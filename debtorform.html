@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Home/img/LogoImg.png" type="image/x-icon">
+  <link rel="stylesheet" href="./Css/debtorForm.css">
+  <script src="./Js/hooks/boostrapSession.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<main>  
+<div class="drag-area">
+  <h2>Sube una Imagen</h2>
+  <span>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="4ba45b1b56"><path d="M 2.757812 31.507812 L 372.355469 31.507812 L 372.355469 335 L 2.757812 335 Z M 2.757812 31.507812 " clip-rule="nonzero"/></clipPath><clipPath id="e191736562"><path d="M 2.757812 89 L 372.355469 89 L 372.355469 343.507812 L 2.757812 343.507812 Z M 2.757812 89 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#4ba45b1b56)"><path fill="#36b695" d="M 123.578125 56.855469 L 120.683594 47.652344 C 117.65625 38.046875 108.753906 31.519531 98.683594 31.519531 L 25.8125 31.519531 C 13.078125 31.519531 2.746094 41.839844 2.746094 54.582031 L 2.746094 311.535156 C 2.746094 324.277344 13.078125 334.601562 25.8125 334.601562 L 349.292969 334.601562 C 362.035156 334.601562 372.355469 324.277344 372.355469 311.535156 L 372.355469 96.0625 C 372.355469 83.320312 362.035156 72.988281 349.292969 72.988281 L 145.578125 72.988281 C 135.507812 72.988281 126.605469 66.460938 123.578125 56.855469 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#ffffff" d="M 18.34375 240.328125 L 232.554688 240.328125 L 232.554688 90.921875 L 18.34375 90.921875 L 18.34375 240.328125 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#e191736562)"><path fill="#30e0b2" d="M 251.882812 109.449219 L 254.074219 103.609375 C 257.328125 94.886719 265.667969 89.121094 274.980469 89.121094 L 350.019531 89.121094 C 362.359375 89.121094 372.355469 99.117188 372.355469 111.457031 L 372.355469 321.269531 C 372.355469 333.601562 362.359375 343.605469 350.019531 343.605469 L 25.082031 343.605469 C 12.75 343.605469 2.746094 333.601562 2.746094 321.269531 L 2.746094 146.28125 C 2.746094 133.941406 12.75 123.945312 25.082031 123.945312 L 230.964844 123.945312 C 240.277344 123.945312 248.617188 118.160156 251.882812 109.449219 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+  </span>
+  <button>Selecciona tu archivo</button>
+  <input type="file" name="files" id="input-file" hidden multiple/>
+
+</div> 
+<div  id="preview"></div>
+<form>
+   <label for="ubicacion">Ubicacion</label>
+  <input type="text" id="ubicacion" placeholder="Belen"/>
+  <label for="direccion">Direccion</label>
+  <input type="text" id="direccion" placeholder="Calle1#80-25"/>
+   <label for="tipo-propiedad">Tipo de Propiedad</label>
+  <input type="text" id="tipo-propiedad" placeholder="Casa" />
+   <label for="tamaño">Tamaño</label>
+  <input type="text" id="tamaño" placeholder="25 mts2"/>
+   <label for="habitaciones">Numero de habitaciones</label>
+  <input type="number" id="habitaciones" placeholder="12" />
+   <label for="numero-baños">Numero de Baños</label>
+  <input type="number" id="numero-baños" placeholder="8" />
+  <label for="valor">Valor$</label>
+  <input type="text" id="valor" placeholder="25000000"/>
+  <label for="descripcion">Dejanos un breve descripcion de la propiedad</label>
+  <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+  <button type="submit" id="button-send">Send</button>
+</form>
+</main>
+<script src="./Js/debtorForm/index.js"></script>
+</body>
+</html>

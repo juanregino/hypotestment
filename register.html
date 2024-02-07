@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./Home/img/LogoImg.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./Css/global.css" />
+    <link rel="stylesheet" href="./Css/register.css" />
+    <title>Document</title>
+  </head>
+  <body class="d-middle">
+    <form id="form-register" class="shadow form" autocomplete="off">
+      <div class="checkbox-container">
+        <label class="container">
+          <input
+            type="radio"
+            name="rol"
+            value="deudor"
+            id="deudor-btn"
+          />
+          <span class="checkmark">Deudor</span>
+        </label>
+        <label class="container">
+          <input
+          type="radio"
+            name="rol"
+            value="acreedor"
+            id="acrededor-btn"
+          />
+          <span class="checkmark">Acreedor</span>
+        </label>
+      </div>
+      <h1 class="text-center mb-3">Register</h1>
+      <div class="mb-3">
+        <label for="name">Ingresa tu Nombre</label>
+        <input type="email " name="name" placeholder="name" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email">Ingresa tu Email</label>
+        <input type="email" name="email" placeholder="email" id="email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="password">Ingresa tu contraseña</label>
+        <input type="password" placeholder="password" id="password" required />
+      </div>
+      <div class="mb-3">
+        <label for="password_confirmation">Validar contraseña</label>
+        <input
+          type="password"
+          placeholder="password-confirmation"
+          id="password-confirmation"
+          name="password_confirmation"
+          required
+        />
+      </div>
+      <div class="mb-3 mt-3">
+        <a href="./login.html"> Inicia Sesión</a>
+      </div>
+
+      <input type="submit" value="Registrarse" class="btn btn-primary" />
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Js/register/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/styles.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Card</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./Imgs/logo-removebg-preview.png" alt="">
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta"><button>Go back</button></a>
+    </header>
+    
+    <!-- Card  first view: -->
+    <section class="card-container">
+      <div class="card">
+        <div class="imgBx"><img src="./Imgs/pexels-binyamin-mellish-106399.jpg" ></div>
+        <div class="content">
+          <span class="price">
+            <a href="">$1,000,000</a>
+          </span>
+          <ul>
+            <li id="ciudad"><i class='bx bx-current-location'></i>Ciudad: </li>
+            <li id="tipoCasa"><i class='bx bx-building-house' ></i>Type: </li>
+          </ul>
+          <a  onclick="showmodal()" class ="infobtn"href="#modal-contan">More Info</a>
+        </div>
+      </div>      
+    </section>
+
+    <!-- Modal view  window: -->
+
+    <div class="modal-container" id="modal-contan">
+      <div class="modal">
+        <a href="#" class="close">&times;</a>
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./Js/app.js"></script>
+  </body>
+</html>
+  
